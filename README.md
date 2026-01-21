@@ -66,7 +66,7 @@ python run_llava_video_samples.py
 python evaluate_llava.py
 ```
 
-Tips: You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace
+Tips: You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace the original code
 
 ```
 ```
@@ -77,7 +77,7 @@ with
 from .model.language_model.llava_llama import LlavaLlamaForCausalLM
 ```
 
-Then, edit "llava/model/multimodal_resampler/qformer.py" and rplace
+Then, edit "llava/model/multimodal_resampler/qformer.py" and rplace the original code
 
 ```
 ```
