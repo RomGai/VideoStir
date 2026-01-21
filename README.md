@@ -14,6 +14,8 @@ git clone https://github.com/RomGai/VideoStir
 cd VideoStir
 ```
 
+You can start with "VideoStir.ipynb", or follow the usage instructions below.
+
 # Inference
 
 ```
