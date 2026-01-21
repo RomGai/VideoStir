@@ -138,7 +138,7 @@ unzip -n IR-600K.zip
 On multiple GPUs:
 
 ```
-accelerate launch --config_file muti_gpu.yaml train.py --config mmkd_black_box_multi.json
+accelerate launch --config_file muti_gpu.yaml train_lora.py --config mmkd_black_box_multi.json
 ```
 
 On a single GPU:
