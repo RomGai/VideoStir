@@ -36,7 +36,7 @@ unzip checkpoint.zip
 
 **Download sample data:**
 
-Download the sample data (for demonstrating the file structure and input format) from [this link](https://drive.google.com/file/d/15GU-sBeE0itzvgo3USDljGSWqp-FtEFE/view?usp=sharing). The subtitle files are optional.
+Download the sample data (for demonstrating the file structure and input format) from [this link](https://drive.google.com/file/d/15GU-sBeE0itzvgo3USDljGSWqp-FtEFE/view?usp=sharing). Put it in the current directory and extract the files. The subtitle files are optional.
 
 ```
 unzip sample_data.zip
