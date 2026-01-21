@@ -43,8 +43,17 @@ python evaluate_llava.py
 ```
 
 
+# Inference
 
+```
+cd train
+```
 
+**Install the required dependencies:**
+
+```
+pip install -r requirements_train.txt
+```
 
 **Prepare IR-600K dataset:**
 
