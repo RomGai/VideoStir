@@ -6,6 +6,7 @@ We recommend installing 64-bit Python 3.12.12 and PyTorch 2.9.0. On a CUDA GPU m
 **Clone the repository:**
 ```
 git clone https://github.com/RomGai/VideoStir
+cd VideoStir
 ```
 
 
