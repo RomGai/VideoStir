@@ -79,22 +79,10 @@ unzip -o labels.zip
 python Anet_data_sampling.py
 ```
 
-(Optional) Delete the raw files to save disk space.
-
-```
-rm -rf \[Update\]_Anet_videos_15fps_short256.zip
-```
-
 3. Download the remaining parts of the IR-600K via [this link](https://drive.google.com/file/d/1D15nd3dzqiTiP6ufTxCOY9lxdQmxk8dK/view?usp=sharing). Put it in the current directory and extract the remaining files.
 
 ```
 unzip -n IR-600K.zip
-```
-
-(Optional) Delete the raw files to save disk space.
-
-```
-rm -rf IR-600K.zip
 ```
 
 **Train the model**
