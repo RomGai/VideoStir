@@ -66,7 +66,9 @@ python run_llava_video_samples.py
 python evaluate_llava.py
 ```
 
-Tips: You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace the original code
+**Note 1:** When you see the "(pdb)" prompt, type "c" and press Enter.
+
+**Note 2:** You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace the original code
 
 ```
 from .model import LlavaLlamaForCausalLM
