@@ -18,7 +18,7 @@ cd train
 **Install the required dependencies:**
 
 ```
-pip install -r requirements.txt
+pip install -r requirements_train.txt
 ```
 
 **Prepare IR-600K dataset:**
@@ -48,5 +48,19 @@ unzip -n IR-600K.zip
 
 ```
 rm -rf IR-600K.zip
+```
+
+**Train the model**
+
+On multiple GPUs:
+
+```
+accelerate launch --config_file muti_gpu.yaml train.py --config mmkd_black_box_multi.json
+```
+
+On a single GPU:
+
+```
+python train_lora.py --config mmkd_black_box_lora_single.json
 ```
 
