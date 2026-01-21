@@ -36,7 +36,7 @@ unzip checkpoint.zip
 
 **Download sample data:**
 
-Download the sample data (for demonstrating the file structure and input format) from [this link](https://drive.google.com/file/d/1Jqhtt8dClorfYuPoeTXQd_GSt-iYPHlc/view?usp=drive_link). The subtitle files are optional.
+Download the sample data (for demonstrating the file structure and input format) from [this link](https://drive.google.com/file/d/15GU-sBeE0itzvgo3USDljGSWqp-FtEFE/view?usp=sharing). The subtitle files are optional.
 
 ```
 unzip sample_data.zip
@@ -66,7 +66,7 @@ python run_llava_video_samples.py
 python evaluate_llava.py
 ```
 
-**Note 1:** When you see the "(pdb)" prompt, type "c" and press Enter.
+**Note 1:** When you see the "(pdb)" prompt, type "c" and press Enter to continue.
 
 **Note 2:** You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace the original code
 
