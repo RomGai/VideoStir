@@ -51,7 +51,7 @@ python evaluate_llava.py
 ```
 
 
-# Inference
+# Train
 
 ```
 cd train
