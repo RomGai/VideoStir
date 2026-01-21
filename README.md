@@ -34,7 +34,9 @@ Download the pretrained weights for the Intent-Relevance Scorer via [this link](
 unzip checkpoint.zip
 ```
 
-**Extract sample data:**
+**Download sample data:**
+
+Download the sample data (for demonstrating the file structure and input format) from [this link](https://drive.google.com/file/d/1Jqhtt8dClorfYuPoeTXQd_GSt-iYPHlc/view?usp=drive_link). The subtitle files are optional.
 
 ```
 unzip sample_data.zip
