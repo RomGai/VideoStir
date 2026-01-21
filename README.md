@@ -70,16 +70,14 @@ pip install -r requirements_train.txt
 
 **Prepare IR-600K dataset:**
 
-1. In the “Missing Videos” section on the [official ActivityNet page](http://activity-net.org/download.html), submit the application form to request access to the dataset. Approval may take some time. Once you receive the dataset’s Google Drive link, download "\[Update\]_Anet_videos_15fps_short256.zip". Put it in the current directory.
-
-2. Extract the annotation files and then sample target frames from the ActivityNet dataset.
+1. In the “Missing Videos” section on the [official ActivityNet page](http://activity-net.org/download.html), submit the application form to request access to the dataset. Approval may take some time. Once you receive the dataset’s Google Drive link, download "\[Update\]_Anet_videos_15fps_short256.zip". Put it in the current directory. Then extract the annotation files and sample target frames from the ActivityNet dataset.
    
 ```
 unzip -o labels.zip
 python Anet_data_sampling.py
 ```
 
-3. Download the remaining parts of the IR-600K via [this link](https://drive.google.com/file/d/1D15nd3dzqiTiP6ufTxCOY9lxdQmxk8dK/view?usp=sharing). Put it in the current directory and extract the remaining files.
+2. Download the remaining parts of the IR-600K via [this link](https://drive.google.com/file/d/1D15nd3dzqiTiP6ufTxCOY9lxdQmxk8dK/view?usp=sharing). Put it in the current directory and extract the remaining files.
 
 ```
 unzip -n IR-600K.zip
