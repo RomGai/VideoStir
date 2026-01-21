@@ -52,10 +52,49 @@ python pipeline.py
 
 Take LLaVA-Video-7B and LongVideoBench as an example:
 
+1. Install dependencies for LLaVA-Video:
+
+```
+pip install git+https://github.com/LLaVA-VL/LLaVA-NeXT.git
+pip install flash-attn --no-build-isolation
+```
+
+2. Run downstream reasoning:
+
 ```
 python run_llava_video_samples.py
 python evaluate_llava.py
 ```
+
+Tips: You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\__init\__.py" and replace
+
+```
+```
+
+with
+
+```
+from .model.language_model.llava_llama import LlavaLlamaForCausalLM
+```
+
+Then, edit "llava/model/multimodal_resampler/qformer.py" and rplace
+
+```
+```
+
+with
+
+```
+from transformers.pytorch_utils import (
+    apply_chunking_to_forward,
+    find_pruneable_heads_and_indices,
+    prune_linear_layer,
+)
+
+from transformers.modeling_utils import (
+    PreTrainedModel,
+```
+
 
 
 # Train
