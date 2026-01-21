@@ -147,3 +147,4 @@ On a single GPU:
 python train_lora.py --config mmkd_black_box_lora_single.json
 ```
 
+Note:  When you see "Enter your choice:", type "3" and press Enter.
