@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 1. In the “Missing Videos” section on the [official ActivityNet page](http://activity-net.org/download.html), submit the application form to request access to the dataset. Approval may take some time. Once you receive the dataset’s Google Drive link, download "\[Update\]_Anet_videos_15fps_short256.zip". Put it in the current directory.
 
-2. Extract the annotation files and then sample from the ActivityNet dataset.
+2. Extract the annotation files and then sample target frames from the ActivityNet dataset.
    
 ```
 unzip -o labels.zip
