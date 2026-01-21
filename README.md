@@ -23,12 +23,11 @@ pip install -r requirements_inference.txt
 
 **Download checkpoint:**
 
-Download the pretrained weights for the Intent-Relevance Scorer via [this link](https://drive.google.com/file/d/1CUC1i7zstZktWDp30Pts4s8E7QULDgns/view?usp=drive_link). Put it in the current directory.
+Download the pretrained weights for the Intent-Relevance Scorer via [this link](https://drive.google.com/file/d/1CUC1i7zstZktWDp30Pts4s8E7QULDgns/view?usp=drive_link). Put it in the current directory and extract the checkpoint.
 
 ```
 unzip checkpoint.zip
 ```
-
 
 **Extract sample data:**
 
