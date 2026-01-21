@@ -69,6 +69,7 @@ python evaluate_llava.py
 Tips: You may encounter an error when using the installed llava package as-is. To fix this, edit "llava/model/\_\_init\_\_.py" and replace the original code
 
 ```
+from .model import LlavaLlamaForCausalLM
 ```
 
 with
@@ -80,6 +81,12 @@ from .model.language_model.llava_llama import LlavaLlamaForCausalLM
 Then, edit "llava/model/multimodal_resampler/qformer.py" and rplace the original code
 
 ```
+from transformers.modeling_utils import (
+    PreTrainedModel,
+    apply_chunking_to_forward,
+    find_pruneable_heads_and_indices,
+    prune_linear_layer,
+)
 ```
 
 with
@@ -93,8 +100,8 @@ from transformers.pytorch_utils import (
 
 from transformers.modeling_utils import (
     PreTrainedModel,
+)
 ```
-
 
 
 # Train
