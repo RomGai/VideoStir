@@ -9,6 +9,17 @@ git clone https://github.com/RomGai/VideoStir
 cd VideoStir
 ```
 
+# Inference
+
+```
+cd inference
+```
+
+**Install the required dependencies:**
+
+```
+pip install -r requirements_inference.txt
+```
 
 # Train
 
