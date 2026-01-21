@@ -148,3 +148,10 @@ python train_lora.py --config mmkd_black_box_lora_single.json
 ```
 
 Note:  When you see "Enter your choice:", type "3" and press Enter.
+
+# Broader Information
+
+VideoStir builds upon several previous works:
+
+1. [Perception Models: Powerful Models for Image, Video, and Audio Perception](https://github.com/facebookresearch/perception_models)
+2. [EasyDistill: Easy Knowledge Distillation for Large Language Models](https://github.com/modelscope/easydistill)
