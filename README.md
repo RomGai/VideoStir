@@ -21,18 +21,6 @@ cd inference
 pip install -r requirements_inference.txt
 ```
 
-# Train
-
-```
-cd train
-```
-
-**Install the required dependencies:**
-
-```
-pip install -r requirements_train.txt
-```
-
 **Extract sample data:**
 
 ```
@@ -46,6 +34,8 @@ python pipeline.py
 ```
 
 **Perform downstream reasoning:**
+
+Take LLaVA-Video-7B and LongVideoBench as an example:
 
 ```
 python run_llava_video_samples.py
