@@ -33,6 +33,29 @@ cd train
 pip install -r requirements_train.txt
 ```
 
+**Extract sample data:**
+
+```
+unzip sample_data.zip
+```
+
+**Run the RAG pipeline:**
+
+```
+python pipeline.py
+```
+
+**Perform downstream reasoning:**
+
+```
+python run_llava_video_samples.py
+python evaluate_llava.py
+```
+
+
+
+
+
 **Prepare IR-600K dataset:**
 
 1. In the “Missing Videos” section on the [official ActivityNet page](http://activity-net.org/download.html), submit the application form to request access to the dataset. Approval may take some time. Once you receive the dataset’s Google Drive link, download "\[Update\]_Anet_videos_15fps_short256.zip". Put it in the current directory.
