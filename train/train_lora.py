@@ -160,12 +160,10 @@ def train(config):
     )
     processor = Qwen2_5_VLProcessor.from_pretrained(config["models"]["student"])
 
-    # ====== 启用 LoRA ======
     if config.get("lora", {}).get("enable", False):
         print(">>> Enabling LoRA fine-tuning ...")
         lora_cfg = config["lora"]
 
-        # 如果模型是量化加载的（如bitsandbytes），需先 prepare
         if hasattr(student_model, "is_loaded_in_8bit") or hasattr(student_model, "is_loaded_in_4bit"):
             student_model = prepare_model_for_kbit_training(student_model)
 
@@ -175,7 +173,7 @@ def train(config):
             target_modules=lora_cfg.get("target_modules", ["q_proj", "v_proj"]),
             lora_dropout=lora_cfg.get("dropout", 0.05),
             bias=lora_cfg.get("bias", "none"),
-            task_type="CAUSAL_LM",  # Qwen2.5 属于自回归生成
+            task_type="CAUSAL_LM", 
         )
 
         student_model = get_peft_model(student_model, lora_config)
@@ -249,7 +247,6 @@ def train(config):
     trainer.train()
     trainer.save_model(config["training"]["output_dir"])
     
-    # # 保存 LoRA Adapter 或合并到原模型
     # if config.get("lora", {}).get("enable", False):
     #     student_model.save_pretrained(config["training"]["output_dir"])
     
