@@ -172,7 +172,7 @@ def export_segments(
             out.write(frame)
 
         out.release()
-        print(f"🎬 Saved: {out_path}")
+        print(f"Saved: {out_path}")
         start_sec = float(start) / fps if fps else 0.0
         end_sec = float(end) / fps if fps else start_sec
         segment_infos.append(
@@ -199,4 +199,5 @@ if __name__ == "__main__":
     embeddings, frames = extract_visual_embeddings(video_path, frame_interval=5)
     change_points, labels = cluster_and_segment(video_path, embeddings, frames, method="kmeans", n_clusters=10)
     export_segments(video_path, change_points)
+
 
