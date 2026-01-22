@@ -25,17 +25,18 @@ def retrieve_topk_segments(
     top_k: int = 3,
     spatial_k: int = 3,
 ) -> List[Dict]:
-    """根据文本查询在图中检索最相关的片段。
-
+    """Retrieve the most relevant segments in the graph given a text query.
+    
     Args:
-        graph: 构建好的时空图。
-        query: 检索文本。
-        top_k: 选取的最相似节点数量。
-        spatial_k: 每个 top 节点额外扩展的空间邻居数量。
-
+        graph: The constructed spatiotemporal graph.
+        query: The text query.
+        top_k: The number of most similar nodes to select.
+        spatial_k: The number of additional spatial neighbors to expand for each top node.
+    
     Returns:
-        list[dict]: 包含 ``node_id``、``similarity`` 以及节点元信息的列表。
+        list[dict]: A list of results containing ``node_id``, ``similarity``, and the node metadata.
     """
+
 
     if graph.number_of_nodes() == 0:
         return []
