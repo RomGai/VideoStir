@@ -8,14 +8,14 @@ def build_spatiotemporal_graph(
     segment_features: Iterable[Dict],
     temporal_weight: float = 1.0,
 ):
-    """根据片段特征构建时空图。
-
+    """Build a spatiotemporal graph based on segment features.
+    
     Args:
-        segment_features: 包含 ``image_features`` 键的片段信息迭代器。
-        temporal_weight: 时间边的权重。
-
+        segment_features: An iterable of segment data containing the ``image_features`` key.
+        temporal_weight: The weight assigned to temporal edges.
+    
     Returns:
-        networkx.Graph: 构建完成的时空图。
+        networkx.Graph: The constructed spatiotemporal graph.
     """
 
     segment_features = list(segment_features)
