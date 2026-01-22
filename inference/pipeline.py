@@ -572,15 +572,17 @@ def run_pipeline(
     short_video_threshold: float = 240.0,
     correct_choice: Optional[Any] = None,
 ) -> Dict[str, List[Dict]]:
-    """执行完整的长视频检索与重排序流程。
-
-    当视频时长低于 ``short_video_threshold`` 时，会自动跳过视觉语义检索，
-    直接以 3 FPS 采样整段视频并调用重排模块进行排序。
-
+    """Run the complete long-video retrieval and re-ranking pipeline.
+    
+    When the video duration is below ``short_video_threshold``, the visual-semantic retrieval step is
+    skipped automatically. Instead, the entire video is sampled at 3 FPS and passed directly to the
+    re-ranking module for sorting.
+    
     Returns:
-        dict: 包含 ``reranked_frames``（经过节点检索和重排的帧列表）以及
-        ``time_focus_frames``（基于时间范围稀疏采样得到的帧列表）的字典。
-        当传入 ``correct_choice`` 时，会附加到生成的检索计划中。
+        dict: A dictionary containing ``reranked_frames`` (a list of frames retrieved via node search and
+            re-ranking) and ``time_focus_frames`` (a list of frames obtained via sparse sampling over the
+            specified time range).
+            If ``correct_choice`` is provided, it will be appended to the generated retrieval plan.
     """
 
     temp_root = tempfile.mkdtemp(prefix="pipeline_tmp_")
@@ -588,7 +590,6 @@ def run_pipeline(
     os.makedirs(segments_dir, exist_ok=True)
 
     output_dir = os.path.abspath(output_dir)
-    # 确保最终输出目录不在临时工作区中，避免清理临时目录时误删最终结果
     if os.path.commonpath([output_dir, temp_root]) == temp_root:
         raise ValueError(
             "Output directory must be outside the pipeline's temporary workspace."
