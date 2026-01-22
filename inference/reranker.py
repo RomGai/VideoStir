@@ -10,7 +10,7 @@ from typing import List, Dict, Iterable, Optional
 from peft import PeftModel
 from time_utils import timestamp_label
 
-adapter_dir = "./result"  # 👈 替换为你训练保存LoRA的目录
+adapter_dir = "./result" 
 
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-VL-3B-Instruct", torch_dtype="auto", device_map="auto"
@@ -160,10 +160,11 @@ def rerank_segments(
     *,
     target_sample_fps: Optional[float] = None,
 ) -> List[Dict]:
-    """对检索到的片段进行帧级重排序，并导出最相关的帧。
-
-    在全局排序前，会优先保留每个片段中得分最高的 ``min_frames_per_clip`` 帧，
-    以避免高分片段被完全过滤掉。"""
+    """Score retrieved segments at the frame level, re-rank them, and export the most relevant frames.
+    
+    Before global ranking, the top-scoring ``min_frames_per_clip`` frames from each segment are kept
+    to avoid entirely filtering out segments that score well overall.
+    """
 
     temp_dir = tempfile.mkdtemp(prefix="frames_tmp_")
     os.makedirs(output_dir, exist_ok=True)
