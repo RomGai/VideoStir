@@ -1,4 +1,4 @@
-# VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG
+# \[ACL 2026\] VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG
 
 ![Framework](/Figure/framework.png)
 
