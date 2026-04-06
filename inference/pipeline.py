@@ -22,7 +22,7 @@ from text_embedding import compute_similarities
 from time_utils import seconds_to_timestamp, timestamp_label
 
 
-_NEAR_ZERO_DURATION = 1e-4
+_NEAR_ZERO_DURATION = 1e-3
 
 
 def _to_serializable(obj: Any) -> Any:
