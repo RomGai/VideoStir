@@ -126,6 +126,8 @@ pip install -r requirements_train.txt
    
 ```
 unzip -o labels.zip
+# Rebuild data with reranker template prompt
+python rebuild_train_prompt.py
 python Anet_data_sampling.py
 ```
 
