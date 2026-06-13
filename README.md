@@ -159,3 +159,15 @@ VideoStir builds upon several previous works:
 
 1. [Perception Models: Powerful Models for Image, Video, and Audio Perception](https://github.com/facebookresearch/perception_models)
 2. [EasyDistill: Easy Knowledge Distillation for Large Language Models](https://github.com/modelscope/easydistill)
+
+# Citation
+
+```
+@article{fu2026videostir,
+  title={VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG},
+  author={Fu, Honghao and Xu, Miao and Wang, Yiwei and Zhang, Dailing and Liu, Jun and Cai, Yujun},
+  journal={arXiv preprint arXiv:2604.05418},
+  year={2026}
+}
+```
+
